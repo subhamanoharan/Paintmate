@@ -46,6 +46,7 @@
     "axios": "^0.18.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-hot-loader": "^4.6.3"
+    "react-hot-loader": "^4.6.3",
+    "react-material-ui-carousel": "^1.6.0"
   }
 }
