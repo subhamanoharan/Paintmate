@@ -11,7 +11,7 @@ export default class CustomAppBar extends Component {
     const preventDefault = (event) => event.preventDefault();
 
     return (
-      <AppBar position="static">
+      <AppBar position="static"  style={{"boxShadow": "none"}}>
         <Toolbar>
           <Grid container>
             <Grid item xs={6}>
