@@ -12,7 +12,7 @@ export default class ProsList extends Component {
     const pros = ["20 years of experience", "Quality", "Craftsmanship"];
     return (
       <Grid container alignItems="center" direction="row" justify="center">
-        { pros.map((pro) => (<Grid item xs={4}> <ProItem input={pro}/></Grid>)) }
+        { pros.map((pro, i) => (<Grid item xs={4} key={i}> <ProItem input={pro}/></Grid>)) }
       </Grid>
     );
   }

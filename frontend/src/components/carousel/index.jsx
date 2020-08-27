@@ -3,7 +3,7 @@ import Box from '@material-ui/core/Box'
 import Carousel from 'react-material-ui-carousel'
 
 const Item = (props) => {
-  return (<img src="brush.jpg" style={{width: "100%", height: "60vh"}}/>)
+  return (<img src="brush.jpg" style={{width: "100%", height: "30vh"}}/>)
 };
 
 export default class CustomCarousel extends Component {
@@ -20,7 +20,7 @@ export default class CustomCarousel extends Component {
     ];
     return (
         <Carousel>
-          { items.map( item => <Item item={item} /> )}
+          { items.map( (item, i) => <Item item={item} key={i}/> )}
         </Carousel>
     );
   }
