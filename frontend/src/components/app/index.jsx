@@ -1,12 +1,8 @@
 import React, { Component} from 'react';
 import {hot} from "react-hot-loader";
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 import CustomAppBar from '../appBar';
-import HomePage from '../homepage';
-import ProductsPage from '../products_page';
-import AboutUsPage from '../about_us_page';
 
 const theme = createMuiTheme(
   {
@@ -36,23 +32,7 @@ const theme = createMuiTheme(
 const App = () =>
   (
     <ThemeProvider theme={theme}>
-
-      <BrowserRouter>
-            <div>
-              < CustomAppBar />
-              <Switch>
-                <Route exact path="/">
-                  <HomePage />
-                </Route>
-                <Route path="/products">
-                  <ProductsPage />
-                </Route>
-                <Route path="/contact-us">
-                  <AboutUsPage />
-                </Route>
-              </Switch>
-            </div>
-      </BrowserRouter>
+      < CustomAppBar />
     </ThemeProvider>
   );
 

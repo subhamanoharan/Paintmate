@@ -4,6 +4,10 @@ import Grid from '@material-ui/core/Grid';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
+import HomePage from "../homepage";
+import ProductsPage from "../products_page";
+import AboutUsPage from "../about_us_page";
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   return (
@@ -18,7 +22,7 @@ function TabPanel(props) {
   );
 }
 
-export default class PageNav extends Component {
+export default class PageTabNav extends Component {
   constructor(props){
     super(props);
     this.state = {value: 0};
@@ -34,18 +38,18 @@ export default class PageNav extends Component {
     return (
       <Grid item sm >
         <Tabs centered value={this.state.value} onChange={this.handleChange} aria-label="simple tabs example">
-          <Tab label="Item One"  />
-          <Tab label="Item Two"  />
-          <Tab label="Item Three" />
+          <Tab label="Home"  />
+          <Tab label="Products"  />
+          <Tab label="About Us" />
         </Tabs>
         <TabPanel value={value} index={0}>
-          <p>Home</p>
+          <HomePage />
         </TabPanel>
         <TabPanel value={value} index={1}>
-          <p>Products</p>
+          <ProductsPage />
         </TabPanel>
         <TabPanel value={value} index={2}>
-          <p>Contact Us</p>
+          <AboutUsPage />
         </TabPanel>
       </Grid>
     );

@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider'
 
 import ProsList from '../prosList';
+import PageNav from '../pageTabNav';
 
 export default class CustomAppBar extends Component {
 
@@ -23,6 +24,9 @@ export default class CustomAppBar extends Component {
               <Divider />
               <ProsList />
               <Divider/>
+            </Grid>
+            <Grid item>
+              <PageNav />
             </Grid>
            </Grid>
         </Toolbar>
