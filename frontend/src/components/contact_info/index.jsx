@@ -11,15 +11,14 @@ import EmailIcon from '@material-ui/icons/Email';
 const Line = ({line}) => (<Typography variant="body2">{line}</Typography>)
 
 const BlockWithIcon = ({icon: Icon, children}) => (
-  <Grid container>
-    <Grid item style={{"align-self": "center"}}> <Icon /> </Grid>
+  <Grid container alignItems="center">
+    <Grid item> <Icon style={{padding: "15px"}}/> </Grid>
     <Grid item> {children} </Grid>
   </Grid>
 );
 
 const Address = (props) => (
   <BlockWithIcon icon={BusinessIcon}>
-    <Line line="Paintmate" />
     <Line line="'Ramar Villa'" />
     <Line line="Plot 30" />
     <Line line="Temple View Avenue" />

@@ -15,13 +15,13 @@ export default class CustomAppBar extends Component {
       <AppBar position="static" style={{"boxShadow": "none"}}>
         <Toolbar disableGutters={true}>
           <Grid container direction="column">
-            <Grid item>
-              <Typography variant="h6" >
+            <Grid item style={{"align-self": "center"}}>
+              <Typography variant="h4">
                 Paintmate
               </Typography>
             </Grid>
             <Grid item style={{display: "contents"}}>
-              <Divider />
+              <Divider/>
               <ProsList />
               <Divider/>
             </Grid>
