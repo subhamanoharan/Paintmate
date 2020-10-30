@@ -1,6 +1,7 @@
 import React, { Component} from 'react';
 
 import ProductCard from "../product_card";
+import Hero from "../hero";
 
 export default class ProductsPage extends Component {
 
@@ -14,7 +15,7 @@ export default class ProductsPage extends Component {
           handle:  'Fluted',
           sizes:  ['2"', '1.5"']
         },
-        src: "brush.jpg"
+        src: "homepage.jpg"
       },
       {
         text: {
@@ -24,7 +25,7 @@ export default class ProductsPage extends Component {
           handle:  'Fluted',
           sizes:  ['2"']
         },
-        src: "brush.jpg"
+        src: "homepage.jpg"
       },
       {
         text: {
@@ -34,12 +35,12 @@ export default class ProductsPage extends Component {
           handle:  'Beaver Tailed',
           sizes:  ['2"', '1.5"']
         },
-        src: "brush.jpg"
+        src: "homepage.jpg"
       }
     ];
     return (
       <div>
-        <img src="brush_colors.jpg" style={{width: "100%", height: "60vh", margin: "20px"}}/>
+        <Hero source="paint-brushes-palette-canvas.jpg" text="Find your brush here" color='black' />
         {productData.map((p,i) => (<ProductCard data={p} index={i}/>))}
       </div>
     )

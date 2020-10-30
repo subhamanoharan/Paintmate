@@ -2,21 +2,17 @@ import React, { Component} from 'react';
 import Box from '@material-ui/core/Box'
 import Carousel from 'react-material-ui-carousel'
 
-const Item = (props) => {
-  return (<img src="brush.jpg" style={{width: "100%", height: "30vh"}}/>)
-};
+import Hero from "../hero";
+
+const Item = ({item: {source, text}}) => (
+  <Hero source={source} text={text} />
+);
 
 export default class CustomCarousel extends Component {
   render(){
     const items = [
-      {
-        name: "Random Name #1",
-        description: "Probably the most random thing you have ever seen!"
-      },
-      {
-        name: "Random Name #1",
-        description: "Probably the most random thing you have ever seen!"
-      }
+      { source: "homepage.jpg", text: "Committed To Quality. Committed To You." },
+      { source: "gift-package-in-hand.jpg", text: "Experience handcrafted excellence" }
     ];
     return (
         <Carousel>

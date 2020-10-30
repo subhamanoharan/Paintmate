@@ -2,6 +2,7 @@ import React, { Component} from 'react';
 import Grid from '@material-ui/core/Grid';
 
 import ContactInfo from "../contact_info";
+import Hero from "../hero";
 
 export default class AboutUsPage extends Component {
 
@@ -9,7 +10,7 @@ export default class AboutUsPage extends Component {
     return (
       <Grid container direction="column">
         <Grid item>
-          <img src="contact_us.jpg" style={{width: "100%", height: "30vh"}}/>
+          <Hero source="antique-typewriter.jpg" text="Contact us"/>
         </Grid>
         <Grid container>
           <Grid item xs={6}>
