@@ -7,11 +7,13 @@
     "node": "10.x"
   },
   "scripts": {
+    "heroku-postbuild": "npm run install:fe && npm run build:fe",
+    "install:fe": "npm install --prefix frontend",
     "start": "npm run build && node dist/src/index.js",
     "lint": "eslint src/",
     "lint:fe": "eslint frontend/src/",
     "dev": "nodemon",
-    "build": "npm run clean && npm run transpile && npm run build:fe",
+    "build": "npm run clean && npm run transpile",
     "build:fe": "cd frontend && npm run build:prod",
     "clean": "rimraf dist/ && npm run clean:fe",
     "clean:fe": "cd frontend && rimraf dist/",
