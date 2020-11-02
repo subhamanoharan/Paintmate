@@ -8,7 +8,7 @@
   },
   "scripts": {
     "heroku-postbuild": "npm run install:fe && npm run build",
-    "install:fe": "npm install --prefix frontend",
+    "install:fe": "npm install --prefix frontend && npm install --prefix frontend --only=dev --no-shrinkwrap",
     "start": "node dist/src/index.js",
     "lint": "eslint src/",
     "lint:fe": "eslint frontend/src/",
