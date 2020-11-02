@@ -7,17 +7,17 @@
     "node": "10.x"
   },
   "scripts": {
-    "heroku-postbuild": "npm run install:fe && npm run build:fe",
+    "heroku-postbuild": "npm run install:fe && npm run build",
     "install:fe": "npm install --prefix frontend",
     "start": "node dist/src/index.js",
     "lint": "eslint src/",
     "lint:fe": "eslint frontend/src/",
     "dev": "nodemon",
-    "build": "npm run clean && npm run transpile",
-    "build:fe": "cd frontend && npm run build:prod",
-    "clean": "rimraf dist/ && npm run clean:fe",
-    "clean:fe": "cd frontend && rimraf dist/",
-    "transpile": "babel ./ --out-dir dist/ --ignore frontend/,./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "build": "npm run build:fe && npm run build:be",
+    "build:be": "npm run clean && npm run build:be",
+    "build:fe": "cd frontend && npm run clean && npm run build:prod",
+    "clean": "rimraf dist/",
+    "build:be": "babel ./ --out-dir dist/ --ignore frontend/,./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
