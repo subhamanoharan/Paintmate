@@ -12,7 +12,7 @@ export default class AboutUsPage extends Component {
         <Grid item>
           <Hero source="antique-typewriter.jpg" text="Contact us"/>
         </Grid>
-        <Grid container>
+        <Grid container justify="space-around">
           <Grid item xs={6}>
             <ContactInfo />
           </Grid>

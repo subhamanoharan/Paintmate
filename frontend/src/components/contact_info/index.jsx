@@ -12,7 +12,7 @@ const Line = ({line}) => (<Typography variant="body2">{line}</Typography>)
 
 const BlockWithIcon = ({icon: Icon, children}) => (
   <Grid container alignItems="center">
-    <Grid item> <Icon style={{padding: "15px"}}/> </Grid>
+    <Grid item> <Icon style={{padding: "5px"}}/> </Grid>
     <Grid item> {children} </Grid>
   </Grid>
 );
