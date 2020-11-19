@@ -27,12 +27,6 @@ const Address = (props) => (
   </BlockWithIcon>
 );
 
-const Phone = () => (
-  <BlockWithIcon icon={PhoneIcon}>
-    <Line line="0452-2311111" />
-  </BlockWithIcon>
-);
-
 const Mobile = () => (
   <BlockWithIcon icon={MobileIcon}>
     <Line line="9566519384" />
@@ -49,7 +43,6 @@ const ContactInfo = (props) => {
   return (
     <Grid container direction="column">
       <Grid item> <Address /> </Grid>
-      <Grid item> <Phone /> </Grid>
       <Grid item> <Mobile /> </Grid>
       <Grid item> <Email /> </Grid>
     </Grid>
