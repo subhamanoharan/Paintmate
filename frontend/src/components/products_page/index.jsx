@@ -40,7 +40,7 @@ export default class ProductsPage extends Component {
     ];
     return (
       <div>
-        <Hero source="paint-brushes-palette-canvas.jpg" text="Find your brush here" color='black' />
+        <Hero source="paint-brushes-palette-canvas.jpg" text="Find your brush here"/>
         {productData.map((p,i) => (<ProductCard data={p} index={i}/>))}
       </div>
     )

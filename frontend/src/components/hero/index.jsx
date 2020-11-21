@@ -1,19 +1,24 @@
 import React, { Component} from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-
 export default class BackImage extends Component {
 
   render(){
-    const {source, text, color='white'} = this.props;
+    const {source, text} = this.props;
+
+    const heroImageStyle = {
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("${source}")`,
+      height: '50vh',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      position: 'relative',
+    };
+
     return (
-      <Grid style={{
-        background: `transparent url(${source}) center no-repeat`,
-        height: "50vh",
-        backgroundSize: "cover"
-      }} container alignItems="center" justify="flex-end">
+      <Grid style={heroImageStyle} container alignItems="center" justify="flex-end">
         <Grid item>
-          <Typography variant="h3" component="h2" style={{color: color, padding: "30px", fontWeight: "700"}}>
+          <Typography variant="h3" component="h2" style={{color: 'white', padding: "30px", fontWeight: "700"}}>
             {text}
           </Typography>
         </Grid>
