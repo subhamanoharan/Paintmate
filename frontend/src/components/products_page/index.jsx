@@ -15,7 +15,7 @@ export default class ProductsPage extends Component {
           handle:  'Fluted',
           sizes:  ['2"', '1.5"']
         },
-        src: "brush-basic.jpg"
+        src: "brushpng.png"
       },
       {
         text: {

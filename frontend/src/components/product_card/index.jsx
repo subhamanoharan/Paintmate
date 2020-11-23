@@ -34,8 +34,6 @@ const Media = ({src}) => (
   <CardMedia
     component="img"
     alt="Brush Collection"
-    width="50px"
-    height="50px"
     image={src}
     title="Brush Collection"
   />
