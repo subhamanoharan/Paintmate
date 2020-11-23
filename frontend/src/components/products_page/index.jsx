@@ -15,7 +15,7 @@ export default class ProductsPage extends Component {
           handle:  'Fluted',
           sizes:  ['2"', '1.5"']
         },
-        src: "homepage.jpg"
+        src: "brush-basic.jpg"
       },
       {
         text: {
@@ -25,7 +25,7 @@ export default class ProductsPage extends Component {
           handle:  'Fluted',
           sizes:  ['2"']
         },
-        src: "homepage.jpg"
+        src: "brush-inter.jpg"
       },
       {
         text: {
@@ -35,7 +35,7 @@ export default class ProductsPage extends Component {
           handle:  'Beaver Tailed',
           sizes:  ['2"', '1.5"']
         },
-        src: "homepage.jpg"
+        src: "brush-advanced.jpg"
       }
     ];
     return (
