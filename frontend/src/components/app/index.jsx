@@ -3,6 +3,7 @@ import {hot} from "react-hot-loader";
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 import CustomAppBar from '../appBar';
+import Base from '../base';
 
 const theme = createMuiTheme(
   {
@@ -33,6 +34,7 @@ const App = () =>
   (
     <ThemeProvider theme={theme}>
       < CustomAppBar />
+      <Base />
     </ThemeProvider>
   );
 
