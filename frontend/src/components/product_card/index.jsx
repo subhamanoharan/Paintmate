@@ -7,10 +7,12 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-
 import Box from '@material-ui/core/Box';
 
-const Content = ({text: {title, description, type, handle, sizes}}) => (
+import Carousel from 'react-material-ui-carousel'
+import Hero from "../hero";
+
+const Content = ({text: {title, description, type, areas}}) => (
   <div>
     <Typography gutterBottom variant="h5" component="h2">
       {title}
@@ -19,44 +21,51 @@ const Content = ({text: {title, description, type, handle, sizes}}) => (
       {description}
     </Typography>
     <Typography variant="body2" component="div">
+      <Box fontWeight='fontWeightBold' display='inline'>Areas: </Box>
+      {areas}
+    </Typography>
+    <Typography variant="body2" component="div">
       <Box fontWeight='fontWeightBold' display='inline'>Type: </Box>{type}
-    </Typography>
-    <Typography variant="body2" component="div">
-      <Box fontWeight='fontWeightBold' display='inline'>Handle: </Box>{handle}
-    </Typography>
-    <Typography variant="body2" component="div">
-      <Box fontWeight='fontWeightBold' display='inline'>Sizes: </Box>{sizes.join()}
     </Typography>
   </div>
 );
 
-const Media = ({src}) => (
-  <CardMedia
-    component="img"
-    alt="Brush Collection"
-    image={src}
-    title="Brush Collection"
-  />
+const Item = ({item: {source, text}}) => (
+  <Hero source={source} text={text} />
 );
+
+const Media = ({items}) => {
+  return (
+    <Carousel indicators={false} navButtonsAlwaysVisible animation="slide" duration={10}>
+      { items.map( (item) => <CardMedia
+          component="img"
+          alt="Brush Collection"
+          image={item}
+          height="70%"
+          title="Brush Collection"
+        />
+   )}
+    </Carousel>
+)};
 
 export default class ProductCard extends Component {
   render(){
-      const {data: {text, src}, index} = this.props;
+      const {data: {text, items}, index} = this.props;
       return (
         <Card raised={true} style={{margin: '50px'}}>
+          <CardContent style={{backgroundSize: "cover", backgroundImage: "url(bg3.png)", backdropFilter: "opacity(0.1)", "color": "white"}}>
+            <Grid container spacing={2} direction={(index%2 === 0) ? "row" : "row-reverse"} alignItems="center">
+              <Grid item xs={6}><Content text={text}/></Grid>
+              <Grid item xs={6}><Media items={items}/></Grid>
+            </Grid>
+          </CardContent>
           <CardActionArea>
-            <CardContent>
-              <Grid container spacing={2} direction={(index%2 === 0) ? "row" : "row-reverse"}>
-                <Grid item xs={6}><Content text={text}/></Grid>
-                <Grid item xs={6}><Media src={src}/></Grid>
-              </Grid>
-            </CardContent>
+            <CardActions>
+              <Button size="small">
+                Buy Now
+              </Button>
+            </CardActions>
           </CardActionArea>
-          <CardActions>
-            <Button size="small">
-              Buy Now
-            </Button>
-          </CardActions>
         </Card>
       );
   }

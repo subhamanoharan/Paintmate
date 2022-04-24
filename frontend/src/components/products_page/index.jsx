@@ -9,33 +9,48 @@ export default class ProductsPage extends Component {
     const productData = [
       {
         text: {
-          title: "Basic",
-          description: "A straightforward selection of basic yet reliable decorating tools that help get the job done in a quick and easy way. Offering excellent value for money, it gives DIY-ers everything they need on a budget.",
-          type: `Interior baseboards, crown moldings or stairs, Interior ceilings, Interior doors and door frames, Interior walls, Interior window frames, Latex based paints, Oil based paints`,
-          handle:  'Fluted',
-          sizes:  ['2"', '1.5"']
+          title: "4\" Size",
+          description: "Suitable for all kinds of interior wall painting, exterior wall painting DIY wall painting projects, ceiling painting, wall touch up, wall décor paintings",
+          areas: `Interior baseboards, crown moldings or stairs, Interior ceilings, Interior doors and door frames, Interior walls, Interior window frames`,
+          type: `Oil based paints, Water Based Paints, Varnish`,
         },
-        src: "brushpng.png"
+        items: [
+          "4inch.jpg",
+          "4inch_dimen.jpg",
+          "4inch_premium.jpg",
+          "4inch_tapered.jpg",
+          "4inch_lasting.jpg",
+        ]
       },
       {
         text: {
-          title: "Intermediate",
-          description: "Our middle range that offers quality brushes, rollers and tools that perform well without too much effort.",
-          type: `Interior baseboards, crown moldings or stairs, Interior ceilings, Interior doors and door frames, Interior walls, Interior window frames, Latex based paints, Oil based paints`,
-          handle:  'Fluted',
-          sizes:  ['2"']
+          title: "3\" Size",
+          description: "Best paintbrush for tricky corners, grill painting, wall touch-ups, décor paintings and DIY projects",
+          areas: `Detailing of artwork, woodwork, wall arts, finishing corners, and edge painting`,
+          type: `Oil based paints, Water Based Paints, Varnish`,
         },
-        src: "brush-inter.jpg"
+        items: [
+          "3inchfront.jpg",
+          "3inch_dimen.jpg",
+          "3inch_premium.jpg",
+          "3inch_tapered.jpg",
+          "3inch_lasting.jpg",
+        ]
       },
       {
         text: {
-          title: "Advanced",
-          description: "Superior in quality, look and feel, this is our ‘best’ range. It combines innovative materials to produce an excellent finish while making decorating easier.",
-          type: `Interior baseboards, crown moldings or stairs, Interior ceilings, Interior doors and door frames, Interior walls, Interior window frames, Latex based paints, Oil based paints`,
-          handle:  'Beaver Tailed',
-          sizes:  ['2"', '1.5"']
+          title: "2\" Size",
+          description: "Best paint brush for detailing, window grill painting, wall touch ups, décor paintings, gate painting and DIY projects",
+          areas: `Detailing of artwork, wood work, wall arts, finishing corners, small corner painting and edge painting`,
+          type: `Oil based paints, Water Based Paints, Varnish`,
         },
-        src: "brush-advanced.jpg"
+        items: [
+          "2inchfront.jpg",
+          "2inch_dimen.jpg",
+          "2inch_premium.jpg",
+          "2inch_tapered.jpg",
+          "2inch_lasting.jpg",
+        ]
       }
     ];
     return (

@@ -6,6 +6,7 @@ import Tab from '@material-ui/core/Tab';
 
 import HomePage from "../homepage";
 import ProductsPage from "../products_page";
+import WhyChooseUsPage from "../why_choose_us_page";
 import AboutUsPage from "../about_us_page";
 
 function TabPanel(props) {
@@ -40,6 +41,7 @@ export default class PageTabNav extends Component {
         <Tabs centered value={this.state.value} onChange={this.handleChange} aria-label="simple tabs example">
           <Tab label="Home"  />
           <Tab label="Products"  />
+          <Tab label="Why Choose Paintmate"  />
           <Tab label="About Us" />
         </Tabs>
         <TabPanel value={value} index={0}>
@@ -49,6 +51,9 @@ export default class PageTabNav extends Component {
           <ProductsPage />
         </TabPanel>
         <TabPanel value={value} index={2}>
+          <WhyChooseUsPage />
+        </TabPanel>
+        <TabPanel value={value} index={3}>
           <AboutUsPage />
         </TabPanel>
       </Grid>
