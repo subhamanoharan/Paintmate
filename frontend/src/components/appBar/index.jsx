@@ -17,12 +17,7 @@ export default class CustomAppBar extends Component {
   render(){
     return (
       <AppBar position="static" style={{"boxShadow": "none", background: 'black'}}>
-        <Toolbar disableGutters={true} style={{marginLeft: 'auto', marginRight: 'auto'}}>
-          <PiIcon />
-          <Typography variant="h3" style={{fontFamily: `${customMonotypeCorsivaRegularFont}, Arial`, color: 'white'}}>
-            Paintmate
-          </Typography>
-        </Toolbar>
+          <img src="Paintmate_Logo_Test4.png" />
       </AppBar>
     );
   }

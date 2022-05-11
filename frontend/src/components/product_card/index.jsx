@@ -50,7 +50,7 @@ const Media = ({items}) => {
 
 export default class ProductCard extends Component {
   render(){
-      const {data: {text, items}, index} = this.props;
+      const {data: {text, items, link}, index} = this.props;
       return (
         <Card raised={true} style={{margin: '50px'}}>
           <CardContent style={{backgroundSize: "cover", backgroundImage: "url(bg3.png)", backdropFilter: "opacity(0.1)", "color": "white"}}>
@@ -62,7 +62,7 @@ export default class ProductCard extends Component {
           <CardActionArea>
             <CardActions>
               <Button size="small">
-                Buy Now
+                <a href={link} target="_blank" rel="noopener noreferrer">Buy Now</a>
               </Button>
             </CardActions>
           </CardActionArea>

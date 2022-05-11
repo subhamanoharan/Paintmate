@@ -20,7 +20,8 @@ export default class ProductsPage extends Component {
           "4inch_premium.jpg",
           "4inch_tapered.jpg",
           "4inch_lasting.jpg",
-        ]
+        ],
+        link: 'https://www.amazon.in/PaintmateTM-Dupont-Filament-Paint-Premium/dp/B09TL5Y5YL/ref=sr_1_3?keywords=Paintmate&qid=1651161335&sr=8-3&th=1'
       },
       {
         text: {
@@ -35,7 +36,8 @@ export default class ProductsPage extends Component {
           "3inch_premium.jpg",
           "3inch_tapered.jpg",
           "3inch_lasting.jpg",
-        ]
+        ],
+        link: 'https://www.amazon.in/PaintmateTM-Dupont-Filament-Paint-Premium/dp/B09TL7BY92/ref=sr_1_3?keywords=Paintmate&qid=1651161335&sr=8-3&th=1'
       },
       {
         text: {
@@ -50,12 +52,13 @@ export default class ProductsPage extends Component {
           "2inch_premium.jpg",
           "2inch_tapered.jpg",
           "2inch_lasting.jpg",
-        ]
+        ],
+        link: 'https://www.amazon.in/PaintmateTM-Dupont-Filament-Paint-Premium/dp/B09TL4H7GY/ref=sr_1_3?keywords=Paintmate&qid=1651161335&sr=8-3&th=1'
       }
     ];
     return (
       <div>
-        <Hero source="paint-brushes-palette-canvas.jpg" text="Find your brush here"/>
+        <Hero source="World Art Day.png" text="Find your brush here"/>
         {productData.map((p,i) => (<ProductCard data={p} index={i}/>))}
       </div>
     )
