@@ -17,14 +17,14 @@ const Content = ({text: {title, description, type, areas}}) => (
     <Typography gutterBottom variant="h5" component="h2">
       {title}
     </Typography>
-    <Typography variant="body2" component="p">
+    <Typography variant="body1" component="p">
       {description}
     </Typography>
-    <Typography variant="body2" component="div">
+    <Typography variant="body1" component="div">
       <Box fontWeight='fontWeightBold' display='inline'>Areas: </Box>
       {areas}
     </Typography>
-    <Typography variant="body2" component="div">
+    <Typography variant="body1" component="div">
       <Box fontWeight='fontWeightBold' display='inline'>Type: </Box>{type}
     </Typography>
   </div>

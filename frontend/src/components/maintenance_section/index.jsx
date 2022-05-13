@@ -16,12 +16,12 @@ export default class MaintenanceSection extends Component {
         </Typography>
         <Divider variant="middle" style={{backgroundColor: 'black'}}/>
         <ul>
-          <li>After each water-based activity, clean brushes thoroughly with dish soap and warm—not hot!—water.</li>
-          <li>Gently work the bristles with your hand until the water flows clean, with the bristles pointing down</li>
-          <li>After that, give the brush a final wash with soap and water, shake it thoroughly, dry it</li>
-          <li>Keep it in the sleeve it came in</li>
-          <li>If you're using oil-based paint, swirl the brush for 30 seconds in a cup of paint or lacquer thinner, then wipe the brush on the cup's side.</li>
-          <li>You'll probably have to repeat this technique a few times until no paint comes out of the brush</li>
+          <Typography variant="body2"><li>After each water-based activity, clean brushes thoroughly with dish soap and warm—not hot!—water.</li></Typography>
+          <Typography variant="body2"><li>Gently work the bristles with your hand until the water flows clean, with the bristles pointing down</li></Typography>
+          <Typography variant="body2"><li>After that, give the brush a final wash with soap and water, shake it thoroughly, dry it</li></Typography>
+          <Typography variant="body2"><li>Keep it in the sleeve it came in</li></Typography>
+          <Typography variant="body2"><li>If you're using oil-based paint, swirl the brush for 30 seconds in a cup of paint or lacquer thinner, then wipe the brush on the cup's side.</li></Typography>
+          <Typography variant="body2"><li>You'll probably have to repeat this technique a few times until no paint comes out of the brush</li></Typography>
         </ul>
       </>
     );

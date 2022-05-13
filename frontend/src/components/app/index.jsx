@@ -1,12 +1,28 @@
 import React, { Component} from 'react';
 import {hot} from "react-hot-loader";
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { createMuiTheme, ThemeProvider, responsiveFontSizes } from '@material-ui/core/styles';
 
 import CustomAppBar from '../appBar';
 import Base from '../base';
+// import MonotypeCorsivaRegular from '../../fonts/MonotypeCorsiva.ttf';
+import MonotypeCorsivaRegular from '../../fonts/MTCORSVA.ttf';
 
-const theme = createMuiTheme(
+const customMonotypeCorsivaRegularFont = 'Monotype Corsiva Regular';
+
+let theme = createMuiTheme(
   {
+    typography: {
+      fontFamily: [
+        "Helvetica Neue",
+        "Arial",
+        "sans-serif"
+      ].join(","),
+      h5: { fontSize: '2.5rem', fontFamily: 'Monotype Corsiva Regular' },
+      h4: { fontSize: '2.2rem', fontFamily: 'Monotype Corsiva Regular' },
+      h3: { fontSize: '2rem', fontFamily: 'Monotype Corsiva Regular' },
+      body1: { fontSize: '1.5rem'},
+      body2: { fontSize: '1rem'},
+    },
     palette: {
       secondary: {
         light: '#000000',
@@ -30,6 +46,7 @@ const theme = createMuiTheme(
   }
 );
 
+theme = responsiveFontSizes(theme)
 const App = () =>
   (
     <ThemeProvider theme={theme}>

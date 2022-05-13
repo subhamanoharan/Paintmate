@@ -18,9 +18,9 @@ export default class CustomCarousel extends Component {
     ];
 
     return (
-      <Container>
+
         <img src='All_Brush_Website_1.png' style={{width: '100%', height: '100%'}} />
-      </Container>
+
         // <Carousel>
         //   { items.map( (item, i) => <Item item={item} key={i}/> )}
         // </Carousel>
