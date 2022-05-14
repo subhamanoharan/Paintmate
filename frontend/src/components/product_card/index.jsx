@@ -60,9 +60,15 @@ export default class ProductCard extends Component {
             </Grid>
           </CardContent>
           <CardActionArea>
-            <CardActions>
-              <Button size="small">
-                <a href={link} target="_blank" rel="noopener noreferrer">Buy Now</a>
+            <CardActions style={{padding: 0}}>
+              <Button variant="contained" style={{width: '100%', background: '#228B22'}}>
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{color: '#ffffff', textDecoration: 'none', letterSpacing: '1rem', fontSize: '1.2rem'}}>
+                  BUY NOW
+                </a>
               </Button>
             </CardActions>
           </CardActionArea>

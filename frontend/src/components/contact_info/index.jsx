@@ -35,7 +35,7 @@ const Mobile = () => (
 
 const Email = () => (
   <BlockWithIcon icon={EmailIcon}>
-    <Line line="manu@ramartech.com" />
+    <Line line="support@ramartech.com" />
   </BlockWithIcon>
 );
 

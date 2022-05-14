@@ -16,7 +16,7 @@ export default class BackImage extends Component {
     };
 
     return (
-      <Grid style={heroImageStyle} container alignItems="center" justify="flex-end">
+      <Grid style={heroImageStyle} container alignItems="center" justify="flex-start">
         <Grid item>
           <Typography variant="h5" component="h2" style={{color: 'white', padding: "30px", fontWeight: "700"}}>
             {text}
