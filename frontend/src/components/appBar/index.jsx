@@ -17,7 +17,7 @@ export default class CustomAppBar extends Component {
 
   render(){
     return (
-      <AppBar position="static" style={{"boxShadow": "none", background: 'black'}}>
+      <AppBar position="static" style={{"boxShadow": "none", background: '#212121'}}>
         <Box style={{ margin: 'auto' }}>
           <img src="Paintmate_Logo_Test8.png" style={{height: '10vh'}}/>
         </Box>

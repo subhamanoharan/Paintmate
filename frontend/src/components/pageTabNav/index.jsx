@@ -38,7 +38,7 @@ export default class PageTabNav extends Component {
     const {value} = this.state;
     return (
       <Grid item sm >
-        <Tabs centered value={this.state.value} onChange={this.handleChange} aria-label="simple tabs example">
+        <Tabs centered value={this.state.value} onChange={this.handleChange} aria-label="simple tabs example"       style={{background: "#ffffff"}}>
           <Tab label="Home"  />
           <Tab label="Products"  />
           <Tab label="Why Choose Paintmate"  />
