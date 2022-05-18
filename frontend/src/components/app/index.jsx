@@ -15,11 +15,11 @@ const theme = createMuiTheme(
         "Arial",
         "sans-serif"
       ].join(","),
-      h5: {fontSize: '2.5rem', fontFamily: customMonotypeCorsivaRegularFont},
-      h4: { fontSize: '2.2rem', fontFamily: customMonotypeCorsivaRegularFont },
-      h3: { fontSize: '2rem', fontFamily: customMonotypeCorsivaRegularFont },
-      body1: { fontSize: '1.5rem'},
-      body2: { fontSize: '1rem'},
+      h5: {fontSize: '6.5vmin', fontFamily: customMonotypeCorsivaRegularFont},
+      h4: { fontSize: '6.2vmin', fontFamily: customMonotypeCorsivaRegularFont },
+      h3: { fontSize: '6vmin', fontFamily: customMonotypeCorsivaRegularFont },
+      body1: { fontSize: '3.5vmin'},
+      body2: { fontSize: '2vmin'},
     },
     palette: {
       primary: {
