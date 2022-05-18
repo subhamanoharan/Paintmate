@@ -27,7 +27,7 @@ const Item = ({item: {source, text, title}}) => {
   }
 
   return (
-  <Grid style={fullScreenImageStyle} container justify="center">
+  <Grid style={fullScreenImageStyle} container justify="center" alignItems="center">
     <Grid item xs={4}>
         <div style={{...imgContainerStyle}}/>
     </Grid>
@@ -35,9 +35,14 @@ const Item = ({item: {source, text, title}}) => {
       <Typography variant="h3" component="h2" style={{color: 'white', padding: "30px", fontWeight: "700"}}>
         {title}
       </Typography>
-      <Typography variant="subtitle2" component="div" style={{color: 'white', padding: "30px", fontWeight: "500"}}>
-        {text}
-      </Typography>
+      <Box display={{ xs: 'none', md: 'block' }}>
+        <Typography
+          variant="body2"
+          component="div"
+          style={{color: 'white', padding: "30px", fontWeight: "500", overflow: 'hidden'}}>
+          {text}
+        </Typography>
+      </Box>
     </Grid>
   </Grid>
   );
