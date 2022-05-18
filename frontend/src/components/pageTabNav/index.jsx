@@ -41,7 +41,7 @@ export default class PageTabNav extends Component {
       <>
         <Box display={{ xs: 'none', md: 'block' }}>
           <Grid item sm >
-            <Tabs centered value={this.state.value} onChange={this.handleChange} aria-label="simple tabs example" style={{background: "#ffffff"}}>
+            <Tabs indicatorColor="primary" centered value={this.state.value} onChange={this.handleChange} aria-label="simple tabs example" style={{background: "#ffffff"}}>
               <Tab label="Home"  />
               <Tab label="Products"  />
               <Tab label="Why Choose Paintmate"  />
