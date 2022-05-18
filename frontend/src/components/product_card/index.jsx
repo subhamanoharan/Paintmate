@@ -12,6 +12,7 @@ import Box from '@material-ui/core/Box';
 import Carousel from 'react-material-ui-carousel'
 import Hero from "../hero";
 
+
 const Content = ({text: {title, description, type, areas}}) => (
   <div>
     <Typography gutterBottom variant="h5" component="h2">
@@ -37,12 +38,13 @@ const Item = ({item: {source, text}}) => (
 const Media = ({items}) => {
   return (
     <Carousel indicators={false} navButtonsAlwaysVisible animation="slide" duration={10}>
-      { items.map( (item) => <CardMedia
+      { items.map( (item,i) => <CardMedia
           component="img"
           alt="Brush Collection"
           image={item}
           height="70%"
           title="Brush Collection"
+          key={i}
         />
    )}
     </Carousel>
@@ -55,8 +57,8 @@ export default class ProductCard extends Component {
         <Card raised={true} style={{margin: '50px'}}>
           <CardContent style={{backgroundSize: "cover", backgroundImage: "url(bg3.png)", backdropFilter: "opacity(0.1)", "color": "white"}}>
             <Grid container spacing={2} direction={(index%2 === 0) ? "row" : "row-reverse"} alignItems="center">
-              <Grid item xs={6}><Content text={text}/></Grid>
-              <Grid item xs={6}><Media items={items}/></Grid>
+              <Grid item xs={12} md={6}><Content text={text}/></Grid>
+              <Grid item xs={12} md={6}><Media items={items}/></Grid>
             </Grid>
           </CardContent>
           <CardActionArea>

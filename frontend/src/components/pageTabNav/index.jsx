@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import Box from '@material-ui/core/Box';
 
 import HomePage from "../homepage";
 import ProductsPage from "../products_page";
@@ -37,26 +38,36 @@ export default class PageTabNav extends Component {
   render(){
     const {value} = this.state;
     return (
-      <Grid item sm >
-        <Tabs centered value={this.state.value} onChange={this.handleChange} aria-label="simple tabs example" style={{background: "#ffffff"}}>
-          <Tab label="Home"  />
-          <Tab label="Products"  />
-          <Tab label="Why Choose Paintmate"  />
-          <Tab label="About Us" />
-        </Tabs>
-        <TabPanel value={value} index={0}>
+      <>
+        <Box display={{ xs: 'none', md: 'block' }}>
+          <Grid item sm >
+            <Tabs centered value={this.state.value} onChange={this.handleChange} aria-label="simple tabs example" style={{background: "#ffffff"}}>
+              <Tab label="Home"  />
+              <Tab label="Products"  />
+              <Tab label="Why Choose Paintmate"  />
+              <Tab label="About Us" />
+            </Tabs>
+            <TabPanel value={value} index={0}>
+              <HomePage />
+            </TabPanel>
+            <TabPanel value={value} index={1}>
+              <ProductsPage />
+            </TabPanel>
+            <TabPanel value={value} index={2}>
+              <WhyChooseUsPage />
+            </TabPanel>
+            <TabPanel value={value} index={3}>
+              <AboutUsPage />
+            </TabPanel>
+          </Grid>
+        </Box>
+        <Box display={{ xs: 'block', md: 'none' }}>
           <HomePage />
-        </TabPanel>
-        <TabPanel value={value} index={1}>
           <ProductsPage />
-        </TabPanel>
-        <TabPanel value={value} index={2}>
           <WhyChooseUsPage />
-        </TabPanel>
-        <TabPanel value={value} index={3}>
           <AboutUsPage />
-        </TabPanel>
-      </Grid>
+        </Box>
+      </>
     );
   }
 }

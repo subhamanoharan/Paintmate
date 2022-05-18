@@ -59,7 +59,7 @@ export default class ProductsPage extends Component {
     return (
       <div>
         <Hero source="World Art Day.png" text="Find your brush here"/>
-        {productData.map((p,i) => (<ProductCard data={p} index={i}/>))}
+        {productData.map((p,i) => (<ProductCard data={p} index={i} key={i}/>))}
       </div>
     )
   }
