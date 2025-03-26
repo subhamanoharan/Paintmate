@@ -17,7 +17,7 @@
     "build:be": "npm run clean && npm run build:be",
     "build:fe": "cd frontend && npm run clean && npm run build:prod",
     "clean": "rimraf dist/",
-    "build:be": "babel ./ --out-dir dist/ --ignore frontend/,./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "build:be1": "babel ./ --out-dir dist/ --ignore frontend/,./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
